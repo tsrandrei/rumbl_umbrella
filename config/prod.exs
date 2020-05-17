@@ -10,9 +10,9 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :rumbl_web, RumblWeb.Endpoint,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
-
+  http: [port: {:system, "PORT"}],
+	url: [scheme: "https", host: "nameless-ocean-93127.herokuapp.com", port: 443],
+	force_ssl: [rewrite_on: [:x_forwarded_proto]],
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
