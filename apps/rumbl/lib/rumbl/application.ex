@@ -5,7 +5,11 @@ defmodule Rumbl.Application do
 
   def start(_type, _args) do
     children = [
-      Rumbl.Repo
+      Rumbl.Repo,
+      # Start a worker by calling: Rumbl.Worker.start_link(arg)
+      # {Rumbl.Worker, arg}
+      # {Rumbl.ResetDB, []}
+      # worker(Rumbl.Periodically, [])
     ]
 
     opts = [strategy: :one_for_one, name: Rumbl.Supervisor]
