@@ -12,7 +12,7 @@ use Mix.Config
 config :rumbl_web, RumblWeb.Endpoint,
   http: [port: {:system, "PORT"}],
 	url: [scheme: "https", host: "nameless-ocean-93127.herokuapp.com", port: 443],
-	force_ssl: [rewrite_on: [:x_forwarded_proto]],
+	force_ssl: [rewrite_on: [:x_forwarded_proto]]
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
